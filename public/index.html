@@ -1,43 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="uk">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="icon" type="image/png" sizes="192x192"
+    href="https://petition.kyivcity.gov.ua/images/favicon/android-icon-192x192.png">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <title>Петиції. Київська міська рада.</title>
+  <link href="/assets/css/cropper.css" rel="stylesheet">
+  <link href="/assets/css/fonts.css" rel="stylesheet">
+  <link href="/assets/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet">
+  <link rel="/assets/css/chosen.css">
+  
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <script crossorigin="anonymous" src="https://browser.sentry-cdn.com/5.0.7/bundle.min.js"></script>
+  <!-- <script src="https://petition.kyivcity.gov.ua/js/SentryInit.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" type="text/javascript"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <!-- <script src="assets/js/ie-emulation-modes-warning.js"></script> -->
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+  <script>
+
+  </script>
+  <script>
+    "use strict";
+    $(document).ready(function () {
+
+      $(".customShare").on("click", function () {
+        var type = $(this).data("type");
+        share(type);
+        // countSharedFbUpdate();
+      });
+
+    });
+  </script>
+  <!--api for carousel-->
+  <!-- <script type="text/javascript" src="assets/js/shablons_main_sh__carousel.js"> -->
+  </script>
+  <!--<script>-->
+
+  <!--(function($) {-->
+
+  <!--/*-->
+  <!--* We need to turn it into a function.-->
+  <!--* To apply the changes both on document ready and when we resize the browser.-->
+  <!--*/-->
+
+  <!--function mediaSize() {-->
+  <!--/* Set the matchMedia */-->
+  <!--if (window.matchMedia('(min-width: 768px) and (max-width: 1200px)').matches) {-->
+  <!--/* Changes when we reach the min-width  */-->
+  <!--var maxCount = 50;-->
+
+  <!--} else {-->
+  <!--/* Reset for CSS changes – Still need a better way to do this! */-->
+  <!--$('body, strong').removeAttr('style');-->
+  <!--}-->
+  <!--};-->
+
+  <!--/* Call the function */-->
+  <!--mediaSize();-->
+  <!--/* Attach the function to the resize event listener */-->
+  <!--window.addEventListener('resize', mediaSize, false);-->
+
+  <!--})(jQuery);-->
+  <!--</script>-->
+  <script src="/assets/js/js_bot_sh.js" type="text/javascript" charset="utf-8"></script>
+  <!-- todo перенести в скрипты -->
+  <script language="javascript">
+    var open_search_win = 0;
+    //$('.carousel').carousel();
+
+    $('.fon-block-win').click(function (e) {
+      if (open_search_win == 1) {
+        open_search(0);
+        document.getElementById('swords').focus();
+      } else {
+        $(".fon-block-win").css("display", "none");
+        un_block_screen();
+      }
+    });
+
+    var openSaveWin = 0;
+    var var_html = $(".block-window-save").html();
+
+    var outMsg = "";
+    var errMsg = "";
+
+    $(document).ready(function () {
+
+      if (errMsg.length > 0) {
+        console.log("errMsg " + errMsg);
+        OpenErrorWindow(errMsg);
+      }
+      if (outMsg.length > 0) {
+        console.log("outMsg " + outMsg);
+        OpenErrorWindow(outMsg);
+      }
+    });
+  </script>
+
+
+</head>
+
+<body class="mainpage">
+  <div class="wrapper">
+    <div class="fon-block-win-load" style="display:none;" id="hidePG">
+      <div id="preloader" aria-busy="true" aria-label="Зачекайте, будь ласка." role="progressbar">
+        <img alt="kyiv logo" class="icon" src="https://petition.kyivcity.gov.ua/images/logo.svg">
+      </div>
+
+      <main id="site" role="main"></main>
+
+    </div>
+
+    <main class="content content__petittion-list" id="root">
+
+      
+
+  </main>
+
+  <div class="scrollToTop" id="scrollToTop"></div></div>
+
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="/assets/js/bootstrap-datepicker.uk.min.js"></script>
+  <script src="/assets/js/image-compressor.min.js"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+  <script src="/assets/js/chosen.jquery.min.js"></script>
+  <script src="/assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="/assets/js/bootstrap-datepicker.uk.min.js"></script>
+  <script src="/assets/js/petitionslist.bundle.js"></script>
+  <script src="/assets/js/petitionslist__InitSliders.js"></script>
+
+</body>
+
 </html>
