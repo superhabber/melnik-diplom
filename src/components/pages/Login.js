@@ -13,11 +13,11 @@ class Login extends Component {
         }
     }
 
-    onSubmitLogin = async (e, email_ = null, pass = null) => {
+    onSubmitLogin = async (e, email_ = null, pass_ = null) => {
         e.preventDefault()
         var email = e.target ? e.target.email.value : email_,
-            pass = e.target ? e.target.pass.value : pass
-        if (email_ && pass) {
+            pass = e.target ? e.target.pass.value : pass_
+        if (email_ && pass_) {
 
             const user = {
                 email: email,
