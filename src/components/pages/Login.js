@@ -17,7 +17,10 @@ class Login extends Component {
         e.preventDefault()
         var email = e.target ? e.target.email.value : email_,
             pass = e.target ? e.target.pass.value : pass_
-        if (email_ && pass_) {
+        
+        if (email && pass) {
+
+            console.log({email, pass})
 
             const user = {
                 email: email,

@@ -5,13 +5,11 @@ import cookie from 'react-cookies'
 
 class View extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            id: props.match.params.id,
-            subed: false
-        }
+    state = {
+        id: this.props.match.params.id,
+        subed: false
     }
+
 
     componentDidMount = async () => {
         await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/petition?id=` + this.state.id)
@@ -21,7 +19,7 @@ class View extends Component {
                 if (cookie.load('user')) {
                     await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/sub_by_user?id=` + cookie.load('user').id + '&model_id=' + petition.id)
                         .then(res => {
-                            subed = res.data
+                            subed = res.data || false
                         })
                 }
 
@@ -134,6 +132,7 @@ class View extends Component {
                                             <h5 className="text-center">Підписати петицію</h5>
                                             {this.state.petition.real_voice !== Number(this.state.petition.max_voice) ?
                                                 (() => {
+                                                    console.log(this.state.subed)
                                                     if (cookie.load('user') && this.state.subed === false && this.state.petition.remain_days !== 0) {
                                                         return (
                                                             <input type="button" onClick={this.subPet} className="btn btn-sign " id="confirmSMSBtn" style={{ marginTop: "0" }} value="Підписати" onclick="auBid(4);" />
