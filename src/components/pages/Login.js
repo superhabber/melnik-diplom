@@ -25,7 +25,7 @@ class Login extends Component {
                 login_errors: undefined
             }
 
-            await axios.post(`https://yaroslav.decor-if.com.ua/melnik/user/login`, JSON.stringify({
+            axios.post(`https://yaroslav.decor-if.com.ua/melnik/user/login`, JSON.stringify({
                 email: user.email,
                 password: user.password
             }))
