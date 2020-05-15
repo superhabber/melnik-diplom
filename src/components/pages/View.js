@@ -14,12 +14,12 @@ class View extends Component {
     }
 
     componentDidMount = async () => {
-        await axios.get(`http://pider/server/admin/petition?id=` + this.state.id)
+        await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/petition?id=` + this.state.id)
             .then(async (res) => {
                 var petition = res.data, subed
 
                 if (cookie.load('user')) {
-                    await axios.get(`http://pider/server/admin/sub_by_user?id=` + cookie.load('user').id + '&model_id=' + petition.id)
+                    await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/sub_by_user?id=` + cookie.load('user').id + '&model_id=' + petition.id)
                         .then(res => {
                             subed = res.data
                         })
@@ -37,7 +37,7 @@ class View extends Component {
     subPet = async (e) => {
         e.preventDefault()
 
-        await axios.post(`http://pider/server/admin/sub_petition`, JSON.stringify({
+        await axios.post(`https://yaroslav.decor-if.com.ua/melnik/admin/sub_petition`, JSON.stringify({
             user_id: cookie.load('user').id,
             model_id: this.state.petition.id
         }))
@@ -68,7 +68,7 @@ class View extends Component {
                                             <div className="petition__item">
                                                 <div className="petition__slider-item" style={{ display: "block" }}>
                                                     <div className="item">
-                                                        <img alt={this.state.petition.title} className="img-responsive" src={"http://pider/server" + this.state.petition.image.src} />
+                                                        <img alt={this.state.petition.title} className="img-responsive" src={"https://yaroslav.decor-if.com.ua/melnik" + this.state.petition.image.src} />
                                                     </div>
 
                                                 </div>

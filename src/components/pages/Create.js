@@ -18,7 +18,7 @@ import {withRouter} from 'react-router-dom'
     }
 
     state = {}
-    UPLOAD_ENDPOINT = 'http://pider/server/admin/image';
+    UPLOAD_ENDPOINT = 'https://yaroslav.decor-if.com.ua/melnik/admin/image';
     onSubmit = async (e) => {
         e.preventDefault()
 
@@ -58,7 +58,7 @@ import {withRouter} from 'react-router-dom'
         }).then(async (res) => {
             console.log(res)
             var path = JSON.parse(res.data).path
-            await axios.post(`http://pider/server/admin/create_petition`, JSON.stringify({
+            await axios.post(`https://yaroslav.decor-if.com.ua/melnik/admin/create_petition`, JSON.stringify({
                 petition: this.state,
                 user_id: cookie.load('user').id,
                 imagePath: path

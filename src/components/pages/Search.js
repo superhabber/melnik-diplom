@@ -23,7 +23,7 @@ class Search extends PureComponent {
     // }
 
     searchByQuery = async () => {
-        await axios.get(`http://pider/server/admin/all_petitions?query=` + this.state.query)
+        await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/all_petitions?query=` + this.state.query)
             .then(res => {
                 this.setState({
                     petitions: res.data

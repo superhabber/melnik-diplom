@@ -10,7 +10,7 @@ export default class Index extends Component {
     }
 
     componentDidMount = async () => {
-        await axios.get(`http://pider/server/admin/all_petitions`)
+        await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/all_petitions`)
             .then(res => {
                 this.setState({
                     petitions: res.data

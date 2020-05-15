@@ -11,7 +11,7 @@ export default class PetitionsList extends PureComponent {
                         <div className="sliders">
                             <Link to={"/petitions/" + item.id}>
                                 <img className="img-responsive"
-                                    src={"http://pider/server" + item.image.src} />
+                                    src={"https://yaroslav.decor-if.com.ua/melnik" + item.image.src} />
                             </Link>
                         </div>
 

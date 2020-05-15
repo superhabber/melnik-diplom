@@ -25,7 +25,7 @@ class Login extends Component {
                 login_errors: undefined
             }
 
-            await axios.post(`http://pider/server/user/login`, JSON.stringify({
+            await axios.post(`https://yaroslav.decor-if.com.ua/melnik/user/login`, JSON.stringify({
                 email: user.email,
                 password: user.password
             }))
@@ -37,7 +37,7 @@ class Login extends Component {
                         cookie.save('usertoken', data.usertoken, { path: '/' })
                         this.props.setUserToken(data.usertoken)
 
-                        axios.post(`http://pider/server/user/data`, JSON.stringify({
+                        axios.post(`https://yaroslav.decor-if.com.ua/melnik/user/data`, JSON.stringify({
                             token: cookie.load('usertoken')
                         }))
                             .then(res => {
@@ -54,7 +54,7 @@ class Login extends Component {
     onSubmitRegister = async (e) => {
         e.preventDefault()
 
-        await axios.post(`http://pider/server/user/register`, JSON.stringify({
+        await axios.post(`https://yaroslav.decor-if.com.ua/melnik/user/register`, JSON.stringify({
             username: e.target.reg_name.value + ' ' + e.target.reg_pr.value,
             email: e.target.email.value,
             password: e.target.pass.value
