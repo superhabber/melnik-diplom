@@ -10,7 +10,6 @@ class View extends Component {
         subed: false
     }
 
-
     componentDidMount = async () => {
         await axios.get(`https://yaroslav.decor-if.com.ua/melnik/admin/petition?id=` + this.state.id)
             .then(async (res) => {

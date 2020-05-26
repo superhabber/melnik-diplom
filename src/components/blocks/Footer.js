@@ -34,17 +34,12 @@ export default class Footer extends Component {
                                     <ul className="nav-info__list">
                                         <li className="nav-info__item">
                                             <span>телефон:
-                    <a href="tel:0443668014">(044) 366-80-14</a>
+                    <a href="tel:0443668014">(066) 745-12-23</a>
                                             </span>
                                         </li>
                                         <li className="nav-info__item">
                                             <span>електронна пошта:
-                    <a href="mailto:support.petition@kyivcity.gov.ua">support.petition@kyivcity.gov.ua</a>
-                                            </span>
-                                        </li>
-                                        <li className="nav-info__item">
-                                            <span>Звернення громадян надсилайте до Контактного центру міста Києва:
-                    <a href="https://1551.gov.ua/" target="_blank">1551.gov.ua</a>
+                    <a href="mailto:ncntu@ukr.net">ncntu@ukr.net</a>
                                             </span>
                                         </li>
                                     </ul>
